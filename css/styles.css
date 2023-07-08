@@ -1,0 +1,482 @@
+:root {
+--paper-border: #5671f5;
+--paper-shadow: #2a45c2;
+--scissors-border: #eb9f0e;
+--scissors-shadow: #c76c1b;
+--rock-border: #db2e4d;
+--rock-shadow: #9d1634;
+--spock-border: #2d8dab;
+--spock-shadow: #156d88;
+--lizard-border: #834ee3;
+--lizard-shadow: #351472;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(at center, #1f3756, #141539);
+    max-width: 1440px;
+    height: 100vh;
+    margin: auto;
+    padding: 3rem 0;
+    color: #fff;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10rem;
+    padding-top: 10rem; 
+}
+
+.modes {
+    text-decoration: none;
+    color: inherit;
+}
+
+.games-modes {
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.games-modes p {
+    margin: 0;
+}
+
+.simple-container {
+    margin: auto;
+    max-width: 700px;
+}
+
+.score {
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.score-result {
+    background-color: #fff;
+    color: hsl(229deg, 64%, 46%);
+    width: 10rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.score-result-advanced {
+    padding: 3rem;
+}
+
+.points {
+    color: hsl(229deg, 25%, 31%);
+    font-size: 4em;
+    font-weight: bold;
+
+}
+
+.score h1 {
+    font-size: 3em;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: .8;
+    width: 12rem;
+}
+
+.board {
+    background: url(../assets/bg-triangle.svg) no-repeat center;
+    height: 30rem;
+}
+
+.board img, .board-advanced img {
+    width: 90px;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.show {
+    display: initial;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top-board {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.board-advanced {
+    background: url(../assets/bg-pentagon.svg) no-repeat center;
+}
+
+.board-advanced.select {
+    justify-content: center;
+    gap: 2rem;
+}
+
+.board-advanced.result {
+    padding-top: 6rem;
+}
+
+.top-board-advanced {
+    display: flex;
+    justify-content: center;
+    top: 2rem;
+    position: relative;
+}
+
+.middle-board-advanced {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+    width: 100%;
+    position: relative;
+    top: -1.5rem;
+
+}
+
+.bottom-board-advanced {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    position: relative;
+    top: -2.5rem;
+}
+
+.result {
+    height: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.your-item, .computer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.your-item span, .computer-item span {
+    font-size: 1.5em;
+    margin: -6rem 0 2rem;
+}
+
+.result-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.result-text span {
+    font-size: 2em;
+    font-weight: bold;
+    margin: -7rem 0 1.5rem;
+}
+
+.result-text button {
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 1.5em;
+    border-radius: .8rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.result-text button:hover {
+    color: #db2e4d;}
+
+
+.item {
+    background-color: #fff;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6rem;
+    border: 20px solid var(--border-color);
+    box-shadow: 0 10px var(--shadow-color), inset 0 10px rgba(0, 0, 150, 0.1);
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+
+.result .item {
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: scale(.9);
+    box-shadow: 0 10px var(--shadow-color), inset 0 10px rgba(0, 0, 150, 0.1), 0 0 50px 10px var(--border-color);
+}
+
+.result .grow {
+    transform: scale(1);
+}
+
+.no-scale {
+    pointer-events: none;
+}
+
+.paper {
+    --border-color: var(--paper-border);
+    --shadow-color: var(--paper-shadow);
+}
+
+.scissors {
+    --border-color: var(--scissors-border);
+    --shadow-color: var(--scissors-shadow);
+}
+
+.rock {
+    --border-color: var(--rock-border);
+    --shadow-color: var(--rock-shadow);
+}
+
+.spock {
+    --border-color: var(--spock-border);
+    --shadow-color: var(--spock-shadow);
+}
+
+.lizard {
+    --border-color: var(--lizard-border);
+    --shadow-color: var(--lizard-shadow);
+}
+
+.rules {
+    width: 100%;
+    text-align: right;
+    padding: 3rem;
+}
+
+.rules-button {
+    background-color: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.2em;
+    letter-spacing: .3rem;
+    border: 1px solid #fff;
+    border-radius: .8rem;
+    padding: .8rem 2.8rem;
+    cursor: pointer;
+}
+
+.rules-button:hover {
+    background-color: #fff;
+    color: #3B4262;
+
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-box {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 0rem 3rem 2rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    color: #3B4262;
+    text-transform: uppercase;
+}
+
+.close {
+    cursor: pointer;
+}
+
+
+
+
+
+@media only screen and (width <= 800px) {
+    main {
+        justify-content: space-between;
+        gap: initial;
+ }
+}
+
+@media only screen and (width <= 750px){
+    body {
+        padding: 0;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        padding-top: 1rem;
+    }
+
+    .simple-container {
+        padding-top: 1rem;
+    }
+
+    .score-result {
+        width: 6rem;
+        padding: .5rem;
+    }
+    
+    .points {
+        font-size: 3em;
+    }
+    
+
+    .score h1 {
+        font-size: 2em;
+        width: 8rem;
+    }
+
+    .score-advanced h1 {
+        font-size: 1.5em;
+        width: 7rem;
+    }
+
+    .top-board {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .board-advanced {
+        padding-top: 0rem;
+    }
+
+    .board img {
+        width: 70px;
+    }
+
+    .board-advanced img {
+        width: 50px;
+    }
+
+    .your-item span, .computer-item span {
+        order: 2;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        letter-spacing: .2rem;
+    }
+    
+    .result {
+        position: relative;
+        justify-content: space-around;
+    }
+    
+    .result-text {
+       position: absolute;
+       top: 70%;
+       left: calc(50% - 300px / 2);
+       width: 300px;
+    }
+
+    .result-text span {
+        font-size: 4em;
+    }
+
+    .result-text button {
+        letter-spacing: .2rem;
+        width: 90%;
+    }
+
+    .item {
+        width: 150px;
+        height: 150px;
+        border-width: 15px;
+        box-shadow: 0 7.5px var(--shadow-color), inset 0 7.5px rgba(0, 0, 150, 0.1);
+    }
+
+    .board-advanced .item {
+        width: 120px;
+        height: 120px;
+        border-width: 13px;
+        box-shadow: 0 7px var(--shadow-color), inset 0 7.5px rgba(0, 0, 150, 0.1);
+
+    }
+
+    .top-board-advanced {
+        top: 0rem;
+    }
+    
+    .middle-board-advanced {
+        gap: 8rem;
+        top: -1.5rem;
+    
+    }
+    
+    .bottom-board-advanced {
+        gap: 5rem;
+        top: 0rem;
+    }
+    
+    
+    .rules {
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    .modal {
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    .modal-box {
+        text-align: center;
+        position: relative;
+    }
+    
+    .modal-header {
+        display: block;
+        margin: 8rem 0;
+    }
+    
+    .close {
+        position: absolute;
+        top: 120%;
+        left: calc(50% - 20px / 2);
+    }
+    
+}

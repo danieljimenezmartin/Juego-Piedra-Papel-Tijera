@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&amp;display=swap"
+        rel="stylesheet">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <div class="modal hidden">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>rules</h2>
+                <div class="close">
+                    <img src="assets/icon-close.svg" alt="close">
+                </div>
+            </div>
+            <div class="modal-content">
+                <img src="assets/image-rules-bonus.svg" alt="rules">
+            </div>
+        </div>
+    </div>
+    <div class="simple-container">
+        <div class="score score-advanced">
+            <div class="score-result score-result-advanced">
+                <span>you</span>
+                <span class="points my-points">0</span>
+            </div>
+            <h1>rock paper scissors lizard spock</h1>
+            <div class="score-result score-result-advanced">
+                <span>pc</span>
+                <span class="points computer-points">0</span>
+            </div>
+        </div>
+        <div class="board-advanced select">
+            <div class="top-board-advanced">
+                <div class="item scissors">
+                    <img src="assets/icon-scissors.svg">
+                </div>
+            </div>
+            <div class="middle-board-advanced">
+                <div class="item spock">
+                    <img src="assets/icon-spock.svg">
+                </div>
+                <div class="item paper">
+                    <img src="assets/icon-paper.svg">
+                </div>
+            </div>
+            <div class="bottom-board-advanced">
+                <div class="item lizard">
+                    <img src="assets/icon-lizard.svg">
+                </div>
+                <div class="item rock">
+                    <img src="assets/icon-rock.svg">
+                </div>
+            </div>
+        </div>
+        <div class="board-advanced result hidden">
+            <div class="your-item">
+                <span>Your Picked</span>
+                <div class="item item-selected no-scale">
+                    <img src="assets/icon-paper.svg">
+                </div>
+            </div>
+            <div class="result-text">
+                <span></span>
+                <button>PLAY AGAIN</button>
+            </div>
+            <div class="computer-item">
+                <span>The PC Picked</span>
+                <div class="item item-computer no-scale">
+                    <img src="assets/icon-paper.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rules">
+        <button class="rules-button">RULES</button>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
