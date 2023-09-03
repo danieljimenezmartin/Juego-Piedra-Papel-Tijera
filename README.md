@@ -16,15 +16,15 @@ Este ejercicio ha sido desarrollado como práctica durante la realización del M
 <br/>
 
 ## <a name="demo"></a>Demo 📹
-![tarjeta](https://github.com/danieljimenezmartin/tarjeta-interactiva/assets/117579989/0ece363b-104b-435f-8b1c-d054ff9dbca1)  
+![juego](https://github.com/danieljimenezmartin/Juego-Piedra-Papel-Tijera/assets/117579989/5c773dc4-115d-4e2b-91d5-dfd075504835)  
+
 <br/>
 
 ## <a name="objetivos"></a>Objetivos 🎯
 
-*   Desarrollar un formulario interactivo responsive en JavaScript con el objetivo de trabajar con la modificación de variables CSS a partir del DOM.
-*   Entender la manipulación del CSS a través de JavaScript mediante la adición y eliminación de clases.
-*   Implementar los métodos del objeto classList que nos permiten la manipulación del CSS (toggle, replace, etc).
-*   Dotar de animaciones al formulario mediante la utilización de CSS consiguiendo un formulario interactivo y visualmente atractivo para el usuario.  
+*   Desarrollar el juego de piedra, papel o tijera, en su modalidad simple, así como una versión más avanzada incluyendo nuevos elementos. Esta aplicación es responsive y ha sido desarrollada en JavaScript.
+*   Esta aplicación se desarrolla con el objetivo de practicar la delegación de eventos para los distintos elementos del DOM.
+*   Practicar el uso de CSS para conseguir un diseño responsive de la aplicación que pueda adaptarse a los diferentes dispositivos en los que se ejecute.  
 <br/>
 
 ## <a name="instalacion"></a>Instalación 🚨 
@@ -32,7 +32,7 @@ Este proyecto no necesita instalación.
 <br/>
 
 ## <a name="ver-proyecto"></a>Ver el proyecto ⚡
-- [https://danieljimenezmartin.github.io/juego-piedra-papel-tijera/](https://danieljimenezmartin.github.io/juego-piedra-papel-tijera/)
+- https://danieljimenezmartin.github.io/Juego-Piedra-Papel-Tijera/
 <br/>
 
 ## <a name="desarrollo"></a>Desarrollo 📐
